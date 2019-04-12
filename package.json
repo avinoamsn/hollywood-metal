@@ -1,20 +1,20 @@
 {
-  "_comment":"TODO: fix sprite generator. removed this script from \"icons\": \"&& svg-sprite-generate -d dist/img/icons -o dist/img/icons/sprite.svg\" ",
+  "_comment": "TODO: fix sprite generator. removed this script from \"icons\": \"&& svg-sprite-generate -d dist/img/icons -o dist/img/icons/sprite.svg\" ",
   "name": "afpa",
   "version": "0.0.1",
   "description": "The Alliance for Patient Access website.",
   "main": "index.js",
   "scripts": {
-		"start": "npm run watch",
+    "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf {*.css,js/*,img/*}",
     "autoprefixer": "postcss -u autoprefixer -r *.css",
     "scss": "node-sass --output-style compressed -o . src/",
     "lint": "eslint src/ || true",
     "lint-scss": "stylelint src/scss/*.scss --syntax scss || true",
-    "uglify": "mkdirp js -p && uglifyjs src/*.js -m -o js/scripts.js && uglifyjs src/*.js -m -c -o js/scripts.min.js",
-    "imagemin": "imagemin src/img/* -o img; imagemin src/img/icons/* -o dist/img/icons",
-    "icons": "svgo -f src/img/svg -o img/svg",
+    "uglify": "mkdirp dist/js -p && uglifyjs src/*.js -m -o dist/js/scripts.js && uglifyjs src/*.js -m -c -o dist/js/scripts.min.js",
+    "imagemin": "imagemin src/img/* -o dist/img; imagemin src/img/icons/* -o dist/img/icons",
+    "icons": "svgo -f src/img/svg -o dist/img/svg",
     "serve": "browser-sync start --server --files \"*.css, *.js, **/*.php, !node_modules/**/*.html\"",
     "build:css": "run-s lint-scss scss autoprefixer",
     "build:js": "run-s lint uglify",
@@ -32,8 +32,8 @@
   },
   "keywords": [
     "alliance",
-		"patient",
-		"access"
+    "patient",
+    "access"
   ],
   "author": "Avi Nerenberg",
   "license": "ISC",
