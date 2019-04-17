@@ -44,7 +44,9 @@ html {
 }
 body {
 	font:300 11px/1.4 'IMMORTAL', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:#444;
+	color:#FFF;
+
+	background: url(./dist/img/svg/background.svg);
 }
 /* clear */
 .clear:before,
@@ -64,11 +66,11 @@ img {
 	vertical-align:bottom;
 }
 a {
-	color:#444;
+	color:#FFF;
 	text-decoration:none;
 }
 a:hover {
-	color:#444;
+	color:#c3c3c3;
 }
 a:focus {
 	outline:0;
@@ -101,15 +103,20 @@ input:focus {
 
 /* logo */
 .logo {
+	width: 100%;
 
-}
-.logo-img {
+	display: flex;
+	justify-content: center;
 
+	a {
+		width: 80%;
+	}
 }
 
 /* nav */
 .nav {
 	width: 100%;
+	font-size: 1.5vw;
 
 	ul {
 		list-style-type: none;
@@ -117,6 +124,8 @@ input:focus {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		padding-left: 0; // rm default padding-left
 
 		li {
 			display: inline;
