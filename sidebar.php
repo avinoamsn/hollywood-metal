@@ -1,5 +1,5 @@
 <!-- sidebar -->
-<aside class="sidebar" role="complementary">
+<aside id="sidebar" class="flex-basis-33" role="complementary">
 
 	<?php get_template_part('searchform'); ?>
 

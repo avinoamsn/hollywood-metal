@@ -11,6 +11,8 @@
 
 // Load any external files you have here
 
+include 'hm-core.functions.php';
+
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
