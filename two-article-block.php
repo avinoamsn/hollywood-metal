@@ -1,4 +1,4 @@
-<section id="<?php echo $template_args['slug']; ?>" class="flex-basis-33">
+<section id="<?php echo $template_args['slug']; ?>" class="flex-basis-33 two-article-column">
 	<h1><?php echo $template_args['title']; ?></h1>
 
 	<section class="article-block">

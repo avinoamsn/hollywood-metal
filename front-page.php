@@ -18,7 +18,7 @@
 			<!-- /latest articles -->
 
 			<!-- articles by category -->
-			<section id="two-article-block">
+			<section id="secondary-articles">
 				<!-- metal reviews -->
 				<?php hm_get_template_part('two-article-block',
 				['title' => 'Metal', 'slug' => 'metal-reviews'] ); ?>
