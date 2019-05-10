@@ -100,7 +100,7 @@ function html5blank_header_scripts()
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_register_script('html5blankscripts', get_template_directory_uri() . '/dist/js/scripts.min.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
     }
 }
@@ -176,9 +176,9 @@ if (function_exists('register_sidebar'))
 {
     // Define Sidebar Widget Area 1
     register_sidebar(array(
-        'name' => __('Widget Area 1', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
-        'id' => 'widget-area-1',
+        'name' => __('Sidebar Widgets', 'html5blank'),
+        'description' => __('Widgets that appear in the sidebar, in the order they are placed here.', 'html5blank'),
+        'id' => 'sidebar-widget',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -186,15 +186,15 @@ if (function_exists('register_sidebar'))
     ));
 
     // Define Sidebar Widget Area 2
-    register_sidebar(array(
-        'name' => __('Widget Area 2', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
-        'id' => 'widget-area-2',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
+    // register_sidebar(array(
+    //     'name' => __('Widget Area 2', 'html5blank'),
+    //     'description' => __('Currently Unused.', 'html5blank'),
+    //     'id' => 'widget-area-2',
+    //     'before_widget' => '<div id="%1$s" class="%2$s">',
+    //     'after_widget' => '</div>',
+    //     'before_title' => '<h3>',
+    //     'after_title' => '</h3>'
+    // ));
 }
 
 // Remove wp_head() injected Recent Comment styles

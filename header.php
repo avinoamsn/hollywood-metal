@@ -14,20 +14,18 @@
 
 		<?php wp_head(); ?>
 		<script>
-        // conditionizr.com
-        // configure environment tests
-        conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
-            tests: {}
-        });
-        </script>
-
+			// conditionizr.com
+			// configure environment tests
+			conditionizr.config({
+					assets: '<?php echo get_template_directory_uri(); ?>',
+					tests: {}
+			});
+		</script>
 	</head>
-	<body <?php body_class(); ?>>
 
+	<body <?php body_class(); ?>>
 		<!-- wrapper -->
 		<div class="wrapper">
-
 			<!-- header -->
 			<header class="header clear" role="banner">
 
@@ -46,5 +44,9 @@
 					</nav>
 					<!-- /nav -->
 
+					<!-- dropdown menu -->
+					<nav class="nav" id="menu-icon" onclick="dropdown()">&#9776;</nav>
+						<div id="menu-collapsible"><?php html5blank_nav(); ?></div>
+					<!-- /dropdown menu -->
 			</header>
 			<!-- /header -->

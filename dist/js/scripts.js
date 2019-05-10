@@ -1,0 +1,1 @@
+var opened=false;function dropdown(){var e=document.getElementById("menu-collapsible");if(!opened){e.style.visibility="visible";e.style.opacity="1";opened=true}else{e.style.visibility="hidden";e.style.opacity="0";opened=false}}
