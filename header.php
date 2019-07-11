@@ -29,24 +29,26 @@
 			<!-- header -->
 			<header class="header clear" role="banner">
 
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/logo.svg" alt="Logo">
-						</a>
-					</div>
-					<!-- /logo -->
+				<!-- logo -->
+				<div class="logo">
+					<a href="<?php echo home_url(); ?>">
+						<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+						<img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/logo.svg" alt="Logo">
+					</a>
+				</div>
+				<!-- /logo -->
 
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
+				<!-- nav -->
+				<nav class="nav" role="navigation">
+					<?php html5blank_nav(); ?>
+				</nav>
+				<!-- /nav -->
 
-					<!-- dropdown menu -->
+				<!-- dropdown menu -->
+				<div id="dropdown-menu-container">
 					<nav class="nav" id="menu-icon" onclick="dropdown()">&#9776;</nav>
-						<div id="menu-collapsible"><?php html5blank_nav(); ?></div>
-					<!-- /dropdown menu -->
-			</header>
-			<!-- /header -->
+					<div id="menu-collapsible"><?php html5blank_nav(); ?></div>
+				</div>
+				<!-- /dropdown menu -->
+		</header>
+		<!-- /header -->

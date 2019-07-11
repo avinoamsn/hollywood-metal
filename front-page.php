@@ -64,7 +64,6 @@
 			<!-- /archive -->
 		</section>
 		<!-- /content (left) side -->
-		</section>
 
 		<?php get_sidebar(); ?>
 	</main>
