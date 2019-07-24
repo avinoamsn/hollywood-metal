@@ -1,8 +1,8 @@
 {
   "_comment": "TODO: fix sprite generator. removed this script from \"icons\": \"&& svg-sprite-generate -d dist/img/icons -o dist/img/icons/sprite.svg\" ",
-  "name": "afpa",
-  "version": "0.0.1",
-  "description": "The Alliance for Patient Access website.",
+  "name": "hollywood-metal",
+  "version": "1.0.0",
+  "description": "The Hollywood Metal website.",
   "main": "index.js",
   "scripts": {
     "start": "npm run watch",
