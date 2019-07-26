@@ -302,19 +302,24 @@ main {
 
 		overflow: hidden; // hide zoomed img on hover
 
-		.article__title, .article__author {
-			background-color: rgba(0, 0, 0, .8);
-			width: 100%;
-		}
-
-		.article__title {
-			position: absolute;
-			bottom: 1.4em;
-		}
-
-		.article__author {
+		.article__meta {
 			position: absolute;
 			bottom: 0;
+
+			width: 100%;
+			height: 50%;
+
+			background-image: linear-gradient(transparent, rgba(0,0,0,0.75) 75%, rgba(0,0,0,.9));
+
+			.article__title {
+				position: absolute;
+				bottom: 1.4em;
+			}
+
+			.article__author {
+				position: absolute;
+				bottom: 0;
+			}
 		}
 
 		a:hover {
