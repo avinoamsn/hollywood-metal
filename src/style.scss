@@ -137,7 +137,11 @@ main {
 	padding: 0 10px 10px 10px;
 	border-radius: 5px;
 
-	/* content (left side section) */
+
+	// front page
+	#content { flex-basis: 100%; }
+
+	// left side section
 	> section {
 		flex-basis: 67%;
 
@@ -289,7 +293,7 @@ main {
 }
 .article-block {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	flex-wrap: wrap;
 
 	.article {
@@ -308,6 +312,8 @@ main {
 
 			width: 100%;
 			height: 50%;
+
+			font-size: 16px;
 
 			background-image: linear-gradient(transparent, rgba(0,0,0,0.75) 75%, rgba(0,0,0,.9));
 
@@ -331,12 +337,18 @@ main {
 
 			.article__title {
 				position: absolute;
-				bottom: 1.4em;
+				bottom: calc(1.4em + 10px);
+
+				padding: 0 10px 0 10px;
 			}
 
 			.article__author {
 				position: absolute;
 				bottom: 0;
+
+				padding: 0 10px 10px 10px;
+
+				color: lightslategray;
 			}
 		}
 
@@ -580,12 +592,6 @@ main {
 }
 @media only screen and (max-width:770px) { // originally 768px, adjusted for front-page flexboxes
 	#content {
-		flex-basis: 100%;
-
-		.article-block {
-			justify-content: space-around;
-		}
-
 		#secondary-articles {
 			justify-content: space-around;
 		}

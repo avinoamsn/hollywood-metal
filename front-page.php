@@ -65,7 +65,7 @@
 		</section>
 		<!-- /content (left) side -->
 
-		<?php get_sidebar(); ?>
+		<!--?php get_sidebar(); ?-->
 	</main>
 	<!-- /top-level divider --
 <?php get_footer(); ?>
