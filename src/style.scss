@@ -15,6 +15,8 @@
     VARIABLES
 \*------------------------------------*/
 
+$customFontFamily: 'IMMORTAL', 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
 /*------------------------------------*\
     MAIN
 \*------------------------------------*/
@@ -47,12 +49,16 @@ html {
 	font-size:62.5%;
 }
 body {
-	font: 300 14px/1.4 'IMMORTAL', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: 300 14px/1.4 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #FFF;
 	// text-shadow: 0 0 5px #000;
 
-	background-image: url(./dist/img/svg/background.svg);
-	background-color: #000;
+	background: linear-gradient(
+		rgba(0, 0, 0, .4),
+		rgba(0, 0, 0, .4)
+	), url(./dist/img/svg/background.svg);
+	//background-image: url(./dist/img/svg/background.svg);
+	//background-color: #000;
 	background-position: center;
   background-repeat: no-repeat;
 	background-size: cover;
@@ -96,6 +102,7 @@ input:focus {
 
 h1 {
 	font-size: 20px;
+	font-family: $customFontFamily;
 }
 
 /*------------------------------------*\
@@ -113,8 +120,8 @@ main::before {
 	height: 100%;
 
 	background: linear-gradient(
-		rgba(0, 0, 0, .5),
-		rgba(0, 0, 0, .5)
+		rgba(0, 0, 0, .93),
+		rgba(0, 0, 0, .93)
 	), url(./dist/img/svg/background.svg);
 	background-position: center;
  	background-repeat: no-repeat;
@@ -122,6 +129,22 @@ main::before {
 	background-attachment: fixed;
 
 	filter: blur(5px);
+}
+
+// banner widgets
+.banner-widgets {
+	min-width: 100%;
+	margin: 1em;
+
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.banner-widgets:nth-child(1) {
+	flex-basis: 33%;
+}
+.banner-widgets:nth-child(2) {
+	flex-basis: 67%;
 }
 
 /**
@@ -132,6 +155,12 @@ main::before {
 aside {
 	overflow: hidden;
 	word-wrap: anywhere;
+
+	margin-top: 1em;
+
+	h3 {
+		font-family: $customFontFamily;
+	}
 }
 
 /**
@@ -199,24 +228,20 @@ main {
 
 			.under-title-details {
 				margin: 0 20px;
+
+				h2 {
+					font-family: $customFontFamily;
+				}
 			}
 		}
 
-		article:nth-child(odd) {
-
-		}
+		article:nth-child(odd) {}
 
 		article:nth-child(even) {
 			flex-direction: row-reverse;
 			// background-color: rgba(0, 0, 0, .5);
 		}
 	}
-
-	// > section:nth-child(even) {
-	// 		display: flex;
-	// 		flex-wrap: wrap;
-	// 		flex-direction: row-reverse;
-	// }
 }
 
 /* wrapper */
@@ -256,6 +281,8 @@ main {
 		align-items: center;
 
 		padding-left: 0; // rm default padding-left
+
+		font-family: $customFontFamily;
 
 		li {
 			display: inline;
@@ -363,14 +390,14 @@ main {
 				position: absolute;
 				bottom: calc(1.4em + 10px);
 
-				padding: 0 10px 0 10px;
+				margin: 0 10px 0 10px;
 			}
 
 			.article__author {
 				position: absolute;
 				bottom: 0;
 
-				padding: 0 10px 10px 10px;
+				margin: 0 10px 10px 10px;
 
 				color: lightslategray;
 			}
@@ -540,7 +567,7 @@ main {
 			}
 
 			#single-header-thumbnail {
-				flex-basis: 40%;
+				// flex-basis: 40%;
 				flex-grow: 1;
 
 				margin-top: 1em;
@@ -740,10 +767,10 @@ a img.aligncenter {
 	margin-right:auto;
 }
 .wp-caption {
-	background:#FFF;
+	// background:#FFF;
 	border:1px solid #F0F0F0;
 	max-width:96%;
-	padding:5px 3px 10px;
+	padding:5px 3px 0;
 	text-align:center;
 }
 .wp-caption.alignnone {
@@ -765,7 +792,7 @@ a img.aligncenter {
 }
 .wp-caption .wp-caption-text,
 .gallery-caption {
-	font-size:11px;
+	font-size:11px !important;
 	line-height:17px;
 	margin:0;
 	padding:0 4px 5px;

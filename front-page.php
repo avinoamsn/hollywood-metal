@@ -3,6 +3,11 @@
 	<!-- top-level divider -->
 	<main role="main">
 
+		<section class="banner-widgets">
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Banner Widgets") ) : ?>
+			<?php endif;?>
+		</section>
+
 		<!-- content (left) side -->
 		<section id="content">
 

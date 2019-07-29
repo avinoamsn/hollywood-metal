@@ -14,9 +14,7 @@
 
 						<!-- post details -->
 						<div class="under-title-details">
-							<span class="date"><?php the_time('F j, Y'); ?> <!--?php the_time('g:i a'); ?--></span>
 							<span class="author"><?php _e( 'By', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-							<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
 						</div>
 						<!-- /post details -->
 					</div>
@@ -24,7 +22,7 @@
 					<!-- post thumbnail -->
 					<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
 						<a id="single-header-thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-							<?php the_post_thumbnail('medium'); // Fullsize image for the single post ?>
+							<?php the_post_thumbnail('large'); // Fullsize image for the single post ?>
 						</a>
 					<?php endif; ?>
 					<!-- /post thumbnail -->

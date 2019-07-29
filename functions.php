@@ -185,6 +185,17 @@ if (function_exists('register_sidebar'))
         'after_title' => '</h3>'
     ));
 
+    // Define splash page banner widget area
+    register_sidebar(array(
+        'name' => __('Banner Widgets', 'html5blank'),
+        'description' => __('Widgets that appear in the splash page banner, in the order they are placed here.', 'html5blank'),
+        'id' => 'banner-widget',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+
     // Define Sidebar Widget Area 2
     // register_sidebar(array(
     //     'name' => __('Widget Area 2', 'html5blank'),
