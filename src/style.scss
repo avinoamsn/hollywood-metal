@@ -139,12 +139,14 @@ main::before {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-}
-.banner-widgets:nth-child(1) {
-	flex-basis: 33%;
-}
-.banner-widgets:nth-child(2) {
-	flex-basis: 67%;
+
+	.widget_youtube_responsive {
+		flex-basis: 33%;
+	}
+
+	.widget_media_image {
+		flex-basis: 67%;
+	}
 }
 
 /**
