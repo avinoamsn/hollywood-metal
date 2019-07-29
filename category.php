@@ -8,7 +8,8 @@
 			<section class="article-block" id="archive">
 				<?php $query = new WP_Query(array(
 					'cat' => get_query_var('cat'),
-					'posts_per_page' => 21
+					'posts_per_page' => 21,
+					'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
 				)); ?>
 				<?php hm_get_template_part('mini-loop', ['query' => $query]); ?>
 			</section>

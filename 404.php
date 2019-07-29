@@ -3,7 +3,6 @@
 	<main role="main">
 		<!-- section -->
 		<section>
-
 			<!-- article -->
 			<article id="post-404" style="display: flex; flex-direction: column;">
 				<h1><?php _e( 'Page not found', 'html5blank' ); ?></h1>
@@ -13,11 +12,8 @@
 				</h2>
 			</article>
 			<!-- /article -->
-
 		</section>
 		<!-- /section -->
-
-		<?php get_sidebar(); ?>
 	</main>
 
 <?php get_footer(); ?>

@@ -10,4 +10,4 @@ while($query->have_posts()) : $query->the_post(); ?>
 	</section>
 
 <?php	endwhile;
-wp_reset_postdata();?>
+wp_reset_postdata(); ?>
