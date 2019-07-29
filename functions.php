@@ -231,6 +231,20 @@ function html5wp_pagination()
     ));
 }
 
+
+// Inifinite pagination with scroll
+function wp_infinitepaginate(){
+    $loopFile        = $_POST['loop_file'];
+    $paged           = $_POST['page_no'];
+    $posts_per_page  = get_option('posts_per_page');
+
+    # Load the posts
+    query_posts(array('paged' => $paged ));
+    get_template_part( $loopFile );
+
+    exit;
+}
+
 // Custom Excerpts
 function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
 {
@@ -361,6 +375,8 @@ add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
+add_action('wp_ajax_infinite_scroll', 'wp_infinitepaginate'); // for logged in user
+add_action('wp_ajax_nopriv_infinite_scroll', 'wp_infinitepaginate'); // if user not logged in
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
