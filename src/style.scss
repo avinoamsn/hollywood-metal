@@ -149,7 +149,7 @@ main::before {
 	.widget_media_image {
 		flex-basis: 65%;
     margin-top: 16.388px;
-    height: 212.625px;
+    max-height: 212.625px;
 		overflow: hidden;
 
 		img {
@@ -648,11 +648,15 @@ main {
 
 }
 @media only screen and (max-width:600px) {
-		/* mini-loop thumbnail sizes */
-		#latest-articles .article, #archive .article, #secondary-articles .two-article-column {
-			width: 100% !important;
+		// mini-loop thumbnail size & banner img size
+		#latest-articles .article,
+		#archive .article,
+		#secondary-articles .two-article-column,
+		.banner-widgets > .widget_media_image {
+			flex-basis: 100%;
 		}
 
+		// shrink font size in articles
 		#single-main article #single-header #single-details h1 {
 			font-size: 20px;
 		}
