@@ -150,7 +150,11 @@ main::before {
 		flex-basis: 65%;
     margin-top: 16.388px;
     height: 212.625px;
-    overflow: hidden;
+		overflow: hidden;
+
+		img {
+			height: 212px;
+		}
 	}
 }
 
