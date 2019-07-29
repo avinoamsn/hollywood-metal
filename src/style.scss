@@ -132,20 +132,25 @@ main::before {
 }
 
 // banner widgets
+// NOTE: styling applies to the specific widgets being used,
+// would need to be updated if these change
 .banner-widgets {
 	min-width: 100%;
-	margin: 1em;
 
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 
 	.widget_youtube_responsive {
-		flex-basis: 33%;
+		flex-basis: 30%;
 	}
 
+	// specific dimensions based on YT widget
 	.widget_media_image {
-		flex-basis: 67%;
+		flex-basis: 65%;
+    margin-top: 16.388px;
+    height: 212.625px;
+    overflow: hidden;
 	}
 }
 
