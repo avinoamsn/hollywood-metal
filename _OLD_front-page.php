@@ -22,6 +22,7 @@
 			</section>
 			<!-- /latest articles -->
 
+			<!-- NOTE: category slugs used here are different from the ones on the published site -->
 			<!-- articles by category -->
 			<section id="secondary-articles">
 				<!-- metal reviews -->
