@@ -8,7 +8,7 @@
 					<div id="single-details">
 						<!-- post title -->
 						<h1>
-							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+							<?php the_title(); ?>
 						</h1>
 						<!-- /post title -->
 

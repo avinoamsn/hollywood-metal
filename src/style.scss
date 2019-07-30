@@ -16,6 +16,8 @@
 \*------------------------------------*/
 
 $customFontFamily: 'IMMORTAL', 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$warmerTextColor: #bbb9b3;
+$warmerLinkColor: lightslategray;
 
 /*------------------------------------*\
     MAIN
@@ -168,6 +170,24 @@ aside {
 	word-wrap: anywhere;
 
 	margin-top: 1em;
+
+	color: $warmerTextColor;
+
+	a {
+		color: $warmerLinkColor;
+
+		&.arpw-title {
+			color: $warmerLinkColor;
+
+			&:hover {
+				color: $warmerLinkColor;
+			}
+		}
+
+		&:hover {
+			color: $warmerLinkColor;
+		}
+	}
 
 	h3 {
 		font-family: $customFontFamily;
@@ -463,10 +483,6 @@ main {
 			img {
 				// box-shadow: 0 0 2px #000;
 			}
-
-			.arpw-title:hover {
-				color: #FFF;
-			}
 		}
 	}
 
@@ -482,12 +498,14 @@ main {
 		input {
 			border: none;
 			border-radius: 2px;
+
+			background-color: $warmerTextColor;
 		}
 
 		.search-submit {
 			//padding: 0 10px;
 
-			color: #fff;
+			color: $warmerTextColor;
 			background-color: #000;
 
 			border: 2px solid black;
@@ -542,7 +560,6 @@ main {
 
 /* Article Pages (single.php) */
 #single-main {
-
 	article {
 		flex-basis: 67%;
 		min-width: 0; // not sure why, but the article carries a 650px min-width by default
@@ -550,6 +567,8 @@ main {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		color: $warmerTextColor;
 
 		#single-header {
 			width: 100%;
@@ -597,6 +616,10 @@ main {
 
 		img {
 			// box-shadow: 0 0 2px #000;
+		}
+
+		a {
+			color: $warmerLinkColor;
 		}
 	}
 }
