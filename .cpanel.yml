@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/frcres/public_html/wp-content/themes/hm-custom
+    - /bin/cp -R . $DEPLOYPATH
