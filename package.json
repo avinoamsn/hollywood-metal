@@ -22,9 +22,11 @@
     "build": "run-s build:*",
     "watch:css": "onchange \"src/*.scss\" -- run-s build:css",
     "watch:js": "onchange \"src/*.js\" -- run-s build:js",
-		"watch:img": "onchange \"src/img/**\" -- run-s build:img",
-		"watch": "run-p watch:*",
-    "postinstall": "run-s build watch"
+    "watch:img": "onchange \"src/img/**\" -- run-s build:img",
+    "watch": "run-p watch:*",
+    "postinstall": "run-s build watch",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -43,7 +45,8 @@
   "homepage": "https://github.com/avinoamsn/afpa#readme",
   "dependencies": {
     "bootstrap": "^4.1.3",
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.9.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "autoprefixer": "^9.1.1",
@@ -65,5 +68,6 @@
     "rules": {
       "no-console": 0
     }
-  }
+  },
+  "snyk": true
 }
